@@ -4,7 +4,7 @@ import AMapLoader from "@amap/amap-jsapi-loader";
     template: "<div class='amap-container' style='width:100%;height:100%'></div>",
 })
 export default class Amap extends Vue {
-    map = {};
+    map = null;
 
     mounted() {
         this.initMapInstance();
@@ -14,12 +14,12 @@ export default class Amap extends Vue {
         AMapLoader.load({
             key: "d9ca9eddce1bac23bbd04872a388a813",
             version: "2.0",
-            plugins: ["AMap.Scale"],
         })
             .then((AMap: any) => {
                 this.map = new AMap.Map(this.$el, {
-                    center: [111.286962, 30.69217],
-                    zoom: 14,
+                    mapStyle: "amap://styles/26a323acfa4aea8a0ada6f75a7041d03",
+                    center: [121.483531, 31.271758],
+                    zoom: 16,
                     resizeEnable: true,
                 });
             })
