@@ -106,6 +106,6 @@ export default class InfoWindow extends Vue {
     }
 
     handleClick() {
-        //
+        this.$emit("handle-click", { state: true, name: this.data?.name });
     }
 }

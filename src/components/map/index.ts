@@ -1,6 +1,7 @@
 import { Vue, Component, Prop, Watch } from "vue-property-decorator";
 import AMapLoader from "@amap/amap-jsapi-loader";
 import InfoWindow from "../infowindow";
+import Modal from "../modal";
 import "./index.scss";
 
 interface RegionData {
@@ -13,7 +14,7 @@ interface RegionData {
 let AMap: any;
 @Component({
     template: require("./index.html"),
-    components: { InfoWindow },
+    components: { InfoWindow, Modal },
 })
 export default class Amap extends Vue {
     @Prop({ default: () => new Object() })
@@ -27,13 +28,15 @@ export default class Amap extends Vue {
     infoWindow: any = {};
     markerData = {};
 
+    visible = false;
+
     @Watch("regionData")
     onRegionDataChange(nv: RegionData) {
         if (!nv || !this.map) return;
         const { lon, lat } = nv;
         this.setCenter(lon, lat);
         this.setZoom();
-        this.infoWindow.close();
+        // this.infoWindow?.close();
         this.showMapPoint(nv.children);
     }
 
@@ -104,6 +107,11 @@ export default class Amap extends Vue {
         this.infoWindow.open(this.map, e.target.getPosition());
     }
 
+    handleClick(data: { state: boolean; name: string }) {
+        const { state, name } = data;
+        this.visible = state;
+        this.curPoint = name;
+    }
     removeMarkList() {
         this.map.remove(this.markerList);
         this.markerList = [];

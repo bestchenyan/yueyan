@@ -1,0 +1,23 @@
+<a-modal :visible="visible" class="modal" :width="1600" :title="data?.text" :footer="null" @ok="handleOk"
+    @cancel="handleCancel">
+    <article class="container">
+        <section class="img-content">
+            <img class="img" v-lazy="activeImg" alt="">
+            <swiper class="swiper-box" :options="swiperOption">
+                <swiper-slide class="card" v-for="(img, index) in imgList" :key="index">
+                    <img class="img" v-lazy="img" alt="">
+                </swiper-slide>
+                <div class="btn swiper-button-prev headShake animated infinite slower" slot="button-prev"></div>
+                <div class="btn swiper-button-next headShake animated infinite slower" slot="button-next"></div>
+            </swiper>
+        </section>
+        <ul class="video-content">
+            <li class="card" v-for="(video,index) in videoList" :key="index">
+                <video class="video" controls loop>
+                    <source :src="video" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </li>
+        </ul>
+    </article>
+</a-modal>

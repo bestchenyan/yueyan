@@ -25,7 +25,7 @@ Vue.use(VueLazyload, {
             if (!options.supportWebp) return;
             if (listener.src === null) listener.src = "";
             if (listener.src) {
-                listener.src = "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/img" + listener.src;
+                listener.src = "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/img/" + listener.src;
             }
         },
     },

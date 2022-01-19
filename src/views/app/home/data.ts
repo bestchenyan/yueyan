@@ -193,7 +193,7 @@ const category = {
             "luxunPark/FBA30A4D3B7C3BEAD1D86BED99CABEF0.png",
             "luxunPark/FF91E345F76198786FF23AF8E4DB5AF2.png",
         ],
-        videoLsit: [
+        videoList: [
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/luxunPark/2021-04-03%20133455.mp4",
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/luxunPark/2021-04-03%20134600.mp4",
         ],
@@ -230,7 +230,7 @@ const category = {
             "syLife/DEF706D580160F73D8C18DD3242A62ED.png",
             "syLife/FDD783BC79A98481D93475992FB2F196.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     syRiverSide: {
         name: "syRiverSide",
@@ -255,7 +255,7 @@ const category = {
             "syRiverSide/EF57769F9779D5F93AA69AC17724B926.png",
             "syRiverSide/EFB407ECF29C5F6569870D9CE76C2B15.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     quyangPark: {
         name: "quyangPark",
@@ -267,7 +267,7 @@ const category = {
             "quyangPark/E485527B99FA2BF918226579DE2FD348.png",
             "quyangPark/E58683F4A203E43BF01E610A91ACF788.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     hkFootBallStation: {
         name: "hkFootBallStation",
@@ -287,7 +287,7 @@ const category = {
             "hkFootBallStation/B5BB146AE0ED6AB846C421E6384EDF46.png",
             "hkFootBallStation/CBF89CF34CB96E43D248089E7309FF58.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     dnTulipPark: {
         name: "dnTulipPark",
@@ -304,7 +304,7 @@ const category = {
             "dnTulipPark/DC51A003648B1EB9DA9E0CE18F000B84.png",
             "dnTulipPark/DF374308447968FF68F7CFFEF5B6CB3B.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     wujiaochang: {
         name: "wujiaochang",
@@ -319,7 +319,7 @@ const category = {
             "wujiaochang/ABCCFE8E486D0085C433B6B46EE0FFF7.png",
             "wujiaochang/ACDEBDF2D6133D86A7353B18FD8C7FC3.png",
         ],
-        videoLsit: [
+        videoList: [
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/wujiaochang/2021-05-31%20163454.mp4",
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/wujiaochang/2021-05-31%20163526.mp4",
         ],
@@ -356,7 +356,7 @@ const category = {
             "hanguoStreet/FA1F6889560CBF0EDC9CB3C62309CF9B.png",
             "hanguoStreet/FD7D55E19E0257FE152C23695206DB88.png",
         ],
-        videoLsit: [
+        videoList: [
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/hanguoStreet/134280.mp4",
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/hanguoStreet/2021-05-29%20210119.mp4",
         ],
@@ -370,7 +370,7 @@ const category = {
             "shSouthStation/373994334419D0EAB9BD0AD91F0F67FA.png",
             "shSouthStation/A8C4399728B645D3871DA6479823D25B.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     zhujiajiao: {
         name: "zhujiajiao",
@@ -408,7 +408,7 @@ const category = {
             "zhujiajiao/EFB3446464D93E4094D8AF0E9722D6B4.png",
             "zhujiajiao/FB1AAE05D6550ECC4520EC428780FEF3.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     yulanyayuan: {
         name: "yulanyayuan",
@@ -516,7 +516,7 @@ const category = {
             "yulanyayuan/FF458F4ADCC43FA5B064C5E892E42277.png",
             "yulanyayuan/FF6AB6B3AC446977DC1DABF2B7727FE7.png",
         ],
-        videoLsit: [
+        videoList: [
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/yulanyayuan/2021-11-20%20100424.mp4",
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/yulanyayuan/116773.mp4",
             "https://yueyan-1306269746.cos.ap-nanjing.myqcloud.com/video/yulanyayuan/131788.mp4",
@@ -554,7 +554,7 @@ const category = {
             "xjWestRoad/F6915799F8C9317929E3569F0CDBCABE.png",
             "xjWestRoad/F97025A93A9B10ADD69B19E43DCC0B50.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     chayanyuese: {
         name: "chayanyuese",
@@ -566,13 +566,13 @@ const category = {
             "chayanyuese/BAA8DCC36914A47BFB7A7EF7B1F779D4.png",
             "chayanyuese/BB51820FF7769608B8B036E421913BA3.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     jlBusStation: {
         name: "jlBusStation",
         text: "监利汽车站",
         imgList: ["jlBusStation/489CEAAC33D10678031279B522603075.png", "jlBusStation/AC9A4ED5C1DF19D0855209F8DCA9315E.png"],
-        videoLsit: [],
+        videoList: [],
     },
     xiangshuiwan: {
         name: "xiangshuiwan",
@@ -587,7 +587,7 @@ const category = {
             "xiangshuiwan/BC214B41959BCEE607165827D939D662.png",
             "xiangshuiwan/C68276CB2B0A9F6D75E000B2049733DB.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     hkRiverBeach: {
         name: "hkRiverBeach",
@@ -610,13 +610,13 @@ const category = {
             "hkRiverBeach/F2FA72416AC3EFC8996F3C9AE4C0C929.png",
             "hkRiverBeach/F8C313F1E35873E84BAFFE1233E92CCA.png",
         ],
-        videoLsit: [],
+        videoList: [],
     },
     jinronggang: {
         name: "jinronggang",
         text: "金融港",
         imgList: ["jinronggang/70F9B29138DDE5E5B726689C86F9A3D8.png", "jinronggang/E593282E372A05A6A8602AEEF75B67AF.png", "jinronggang/FFC375AC987F62E1959F318D934A1B4B.png"],
-        videoLsit: [],
+        videoList: [],
     },
 };
 export { regionList, category };

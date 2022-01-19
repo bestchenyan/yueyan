@@ -1,4 +1,5 @@
 <article class="amap">
     <div ref="amap" class="amap-container" style="width:100%;height:100%"></div>
-    <InfoWindow ref="infoWindow" :infoWindow="infoWindow" :data="markerData" />
+    <InfoWindow ref="infoWindow" :infoWindow="infoWindow" @handle-click="handleClick" :data="markerData" />
+    <Modal v-model="visible" :curPoint="curPoint" />
 </article>
