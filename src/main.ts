@@ -4,6 +4,7 @@ import store from "./store";
 import VueLazyload from "vue-lazyload";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+import "./assets/fonts/index.scss";
 
 import "@/assets/styles";
 import Antd from "ant-design-vue";

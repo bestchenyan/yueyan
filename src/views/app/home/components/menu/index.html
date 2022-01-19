@@ -1,0 +1,12 @@
+<article class="menu">
+    <a-select v-model="curRegion" style="width: 120px">
+        <a-select-option v-for="region in regionList" :key="region.name" :value="region.name">
+            {{region.text }}
+        </a-select-option>
+    </a-select>
+    <a-radio-group name="radioGroup" v-model="curRadio">
+        <a-radio v-for="radio in radioList" :key="radio.name" :value="radio.name">
+            {{radio.text}}
+        </a-radio>
+    </a-radio-group>
+</article>

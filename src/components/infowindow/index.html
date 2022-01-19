@@ -1,0 +1,26 @@
+<InfoWindow1Border :borderStyle="borderStyle" :titleBgSize="titleBgSize">
+    <div class="info-window-1" ref="info" :style="exteriorStyle">
+        <span class="info-window-1-close" :style="closeStyle" @click="close">
+            ×
+        </span>
+        <p class="info-window-1-title" ref="title" :style="titleStyle">
+            <span>{{data?.text}}</span>
+        </p>
+        <div ref="content" class="info-window-1-content" :style="contentStyle">
+            <ul ref="field" class="field-list">
+                <li class="field" v-for="(field,index) in fieldData" :key="index">
+                    <span :style="valueStyle">{{field}}</span>
+                </li>
+            </ul>
+        </div>
+        <ul class="info-window-1-btn-groups">
+            <li class="button" :style="buttonStyle" @click="handleClick">
+                看看我吧
+            </li>
+        </ul>
+        <div class="footer-line" :style="footerLineStyle">
+            <div class="info-footer-point"></div>
+            <div class="info-footer-line"></div>
+        </div>
+    </div>
+</InfoWindow1Border>

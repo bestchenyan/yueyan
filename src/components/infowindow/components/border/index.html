@@ -1,0 +1,36 @@
+<article class="info-window-1-border">
+    <svg class="svg-container" :style="svgStyle">
+        <defs>
+            <polygon id="info-window-1-path-1" :points="borderPath"></polygon>
+            <filter x="-2.6%" y="-4.3%" width="105.2%" height="108.6%" filterUnits="objectBoundingBox"
+                id="info-window-1-filter-1">
+                <feGaussianBlur stdDeviation="11.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"
+                    result="shadowInnerInner1"></feComposite>
+                <feColorMatrix :values="colorMatrix" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            </filter>
+            <linearGradient x1="50%" y1="13.7477705%" x2="50%" y2="98.706945%" id="info-window-1-linearGradient-1">
+                <stop :stop-color="themeColor" stop-opacity="0" offset="0%"></stop>
+                <stop :stop-color="themeColor" stop-opacity="0.65" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="50%" y1="12.834403%" x2="50%" y2="100%" id="info-window-1-linearGradient-2">
+                <stop :stop-color="themeColor" stop-opacity="0" offset="0%"></stop>
+                <stop :stop-color="themeColor" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <g id="info-window-1-border" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path v-bind="strokeAttr" :d="leftTriangle" :fill="themeColor"></path>
+            <path v-bind="strokeAttr" :d="rightTriangle" :fill="themeColor"></path>
+            <path v-bind="strokeAttr" :d="leftRect" :fill="themeColor"></path>
+            <path v-bind="strokeAttr" :d="rightRect" :fill="themeColor"></path>
+
+            <polygon id="border" v-bind="strokeAttr" :points="borderPath" :fill="backgroundColor"></polygon>
+            <use fill="black" fill-opacity="1" filter="url(#info-window-1-filter-1)" xlink:href="#info-window-1-path-1">
+            </use>
+            <polygon fill="url(#info-window-1-linearGradient-1)" stroke="url(#info-window-1-linearGradient-2)"
+                :points="titleBgPoints"></polygon>
+        </g>
+    </svg>
+    <slot></slot>
+</article>

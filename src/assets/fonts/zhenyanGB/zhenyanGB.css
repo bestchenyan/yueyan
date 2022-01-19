@@ -1,0 +1,6 @@
+@charset 'UTF-8';
+
+@font-face {
+    font-family: "zhenyanGB";
+    src: url(~@/assets/fonts/zhenyanGB/ZhenyanGB-Regular.ttf) format("truetype");
+}
