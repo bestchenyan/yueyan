@@ -1,9 +1,18 @@
 <div class="home">
     <Amap :regionData="regionData" :curPoint="curPoint" />
     <p-Menu @handle-region-change="handleRegionChange" @handle-radio-change="handleRadioChange" />
-    <!-- <video controls loop width="250">
-        <source :src="videoUrl" type="video/mp4">
-        Sorry, your browser doesn't support embedded videos.
-    </video> -->
-    <!-- <img class="img" v-lazy="img" alt=""> -->
+    <CountDown v-if="visible" v-slot="timeObj" :isMilliSecond="true" :end="countDown" @handle-time-end="handleTimeEnd">
+        <div class="time">
+            <template v-if="showCountDown">
+                <p text="离一周年还剩" class="title">离一周年还剩</p>
+                <p :text="`${timeObj.d}天${timeObj.hh}小时${timeObj.mm}分钟${timeObj.ss}秒`" class="value">
+                    {{timeObj.d}}天{{timeObj.hh}}小时{{timeObj.mm}}分钟{{timeObj.ss}}秒
+                </p>
+            </template>
+            <template v-else>
+                <p class="title success">一周年啦！！！</p>
+            </template>
+        </div>
+
+    </CountDown>
 </div>

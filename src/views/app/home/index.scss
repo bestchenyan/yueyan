@@ -5,12 +5,42 @@
     height: 100%;
     position: relative;
 
-    .img {
-        position: absolute;
-        top: 0;
-        z-index: 12;
-        width: 280px;
-        height: 160px;
-        object-fit: contain;
+    .count-down {
+        .time {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-size: 140px;
+                font-family: "zhenyanGB";
+                line-height: 1.25;
+                color: #fff;
+                -webkit-text-stroke: 2px rgb(255, 215, 0);
+                position: relative;
+                &::before {
+                    content: attr(text);
+                    position: absolute;
+                    z-index: -1;
+                    text-shadow: 0 0 12px #000000;
+                }
+            }
+
+            .value {
+                font-size: 144px;
+                font-family: "zhenyanGB";
+                line-height: 1.25;
+                color: #fff;
+                -webkit-text-stroke: 2px rgba(230, 230, 230, 0.3);
+                position: relative;
+                &::before {
+                    content: attr(text);
+                    position: absolute;
+                    z-index: -1;
+                    text-shadow: 15px 10px 12px #000000;
+                }
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ import AMapLoader from "@amap/amap-jsapi-loader";
 import InfoWindow from "../infowindow";
 import Modal from "../modal";
 import "./index.scss";
+import { isEmpty } from "lodash-es";
 
 interface RegionData {
     name: string;
@@ -25,28 +26,44 @@ export default class Amap extends Vue {
     map: any = null;
     markerList: any[] = [];
 
+    markPointName = "";
+
     infoWindow: any = {};
     markerData = {};
 
     visible = false;
+    infowindowShow = false;
+
+    isCenterMove = false;
 
     @Watch("regionData")
     onRegionDataChange(nv: RegionData) {
         if (!nv || !this.map) return;
         const { lon, lat } = nv;
+        this.isCenterMove = true;
+        this.map.on("moveend", this.mapCenterMoveend);
         this.setCenter(lon, lat);
         this.setZoom();
-        // this.infoWindow?.close();
+        !isEmpty(this.infoWindow) && this.infoWindow.close();
         this.showMapPoint(nv.children);
     }
 
     @Watch("curPoint")
     onCurPointChange(val: string) {
         if (!val || !this.map) return;
+        if (this.markPointName) {
+            if (this.isCenterMove) return;
+            this.map.off("moveend", this.mapCenterMoveend);
+        }
+        this.setMarkPoint(val);
+    }
+
+    setMarkPoint(val: string) {
         const data = this.regionData.children.find((g) => g.name === val);
         const { lon, lat } = data;
+        this.markPointName = val;
         this.setCenter(lon, lat);
-        this.setZoom(16, 18, 1000);
+        this.setZoom(14, 18, 1000);
     }
 
     mounted() {
@@ -73,11 +90,16 @@ export default class Amap extends Vue {
             });
     }
 
+    mapCenterMoveend() {
+        this.isCenterMove = false;
+        this.onCurPointChange(this.curPoint);
+    }
+
     showMapPoint(data: RegionData[]) {
         this.removeMarkList();
         const icon = new AMap.Icon({
-            image: window.location.origin + "/images/map/bridge.png",
-            size: [72, 132],
+            image: window.location.origin + "/images/map/point.png",
+            size: [73, 131],
             anchor: "center",
         });
         data.forEach((g: RegionData) => {
@@ -98,6 +120,7 @@ export default class Amap extends Vue {
     }
 
     showInfoWindow(e: any) {
+        this.infowindowShow = true;
         this.infoWindow = new AMap.InfoWindow({
             isCustom: true,
             content: (<any>this.$refs.infoWindow).$el,
@@ -110,7 +133,7 @@ export default class Amap extends Vue {
     handleClick(data: { state: boolean; name: string }) {
         const { state, name } = data;
         this.visible = state;
-        this.curPoint = name;
+        this.markPointName = name;
     }
     removeMarkList() {
         this.map.remove(this.markerList);

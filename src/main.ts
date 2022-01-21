@@ -12,6 +12,8 @@ import dayjs from "dayjs";
 import zhcn from "dayjs/locale/zh-cn";
 dayjs.locale(zhcn);
 
+import "css-doodle";
+
 Vue.config.productionTip = false;
 Vue.use(Antd);
 Vue.use(VueAwesomeSwiper);

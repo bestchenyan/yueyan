@@ -3698,6 +3698,11 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
+css-doodle@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.npmmirror.com/css-doodle/download/css-doodle-0.24.1.tgz#829247558e0f83c866190d0f5b933280d6fd8a29"
+  integrity sha512-H5m0CSoWNgbJ1gjmEd/cffXYrvZURjOZ/ZeU0D1PXy+QvRL4gygD2nlZqpu5c6nSDfpts3MsoGcBszN9r41O6g==
+
 css-loader@^3.5.3:
   version "3.6.0"
   resolved "https://registry.npmmirror.com/css-loader/download/css-loader-3.6.0.tgz?cache=0&sync_timestamp=1635967924209&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcss-loader%2Fdownload%2Fcss-loader-3.6.0.tgz#2e4b2c7e6e2d27f8c8f28f61bffcd2e6c91ef645"
