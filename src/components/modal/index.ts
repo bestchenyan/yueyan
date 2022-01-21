@@ -70,10 +70,12 @@ export default class Modal extends Vue {
     }
 
     handleOk() {
+        this.data = {};
         this.$emit("change", false);
     }
 
     handleCancel() {
+        this.data = {};
         this.$emit("change", false);
     }
 }

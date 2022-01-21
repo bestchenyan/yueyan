@@ -23,8 +23,8 @@ export default class Home extends Vue {
     visible = true;
     showCountDown = true;
 
-    countDown = dayjs("2022-1-23").valueOf();
-
+    // countDown = dayjs("2022-1-23").valueOf();
+    countDown = 1642750079657;
     handleRegionChange(data: RegionData) {
         this.regionData = data;
     }
@@ -37,6 +37,6 @@ export default class Home extends Vue {
         this.showCountDown = false;
         setTimeout(() => {
             this.visible = false;
-        }, 1000);
+        }, 3000);
     }
 }
